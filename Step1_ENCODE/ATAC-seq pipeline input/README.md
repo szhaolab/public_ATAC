@@ -21,6 +21,7 @@ atac_input_3.json
 ## Structure of JSON
 
 Each JSON file defines:
+
 - **Reference genome**  
 ```json
 "atac.genome_tsv": "/path/to/hg38.tsv"
@@ -30,13 +31,11 @@ Points to a .tsv file that includes reference FASTA, index, and annotation.
 
 "atac.paired_end": true
 
-
 	•	FASTQ files
 Each replicate is defined by R1 and R2 files:
 
 "atac.fastqs_rep1_R1": ["/path/to/SRR7650729_1.fastq"],
 "atac.fastqs_rep1_R2": ["/path/to/SRR7650729_2.fastq"]
-
 
 	•	Optional flags
 
@@ -68,4 +67,3 @@ caper hpc submit atac.wdl \
 Notes
 	•	Each JSON contains at most 10 replicates.
 	•	Replicates beyond 10 are distributed across multiple JSON files to avoid overly large input lists.
-
