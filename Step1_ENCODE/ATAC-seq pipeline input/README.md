@@ -22,48 +22,49 @@ atac_input_3.json
 
 Each JSON file defines:
 
-- **Reference genome**  
-```json
-"atac.genome_tsv": "/path/to/hg38.tsv"
+- Reference genome  
 
-Points to a .tsv file that includes reference FASTA, index, and annotation.
-	•	Paired-end flag
+“atac.genome_tsv”: “/path/to/hg38.tsv”
 
-"atac.paired_end": true
+Points to a `.tsv` file that includes reference FASTA, index, and annotation.
 
-	•	FASTQ files
-Each replicate is defined by R1 and R2 files:
+- Paired-end flag  
 
-"atac.fastqs_rep1_R1": ["/path/to/SRR7650729_1.fastq"],
-"atac.fastqs_rep1_R2": ["/path/to/SRR7650729_2.fastq"]
+“atac.paired_end”: true
 
-	•	Optional flags
+- FASTQ files  
+Each replicate is defined by R1 and R2 files:  
 
-"atac.enable_idr": false,
-"atac.enable_xcor": false,
-"atac.true_rep_only": true,
-"atac.align_only": true
+“atac.fastqs_rep1_R1”: [”/path/to/SRR7650729_1.fastq”],
+“atac.fastqs_rep1_R2”: [”/path/to/SRR7650729_2.fastq”]
 
-Disable IDR and cross-correlation steps.
-Use only true replicates.
+- Optional flags  
+
+“atac.enable_idr”: false,
+“atac.enable_xcor”: false,
+“atac.true_rep_only”: true,
+“atac.align_only”: true
+
+Disable IDR and cross-correlation steps.  
+Use only true replicates.  
 Run alignment only (skip peak calling and downstream analysis).
 
-⸻
+---
 
-Example usage
+## Example usage
 
-Submit a job with Caper:
+Submit a job with Caper:  
 
-caper hpc submit atac.wdl \
-  -i /dartfs/rc/lab/S/Szhao/qiruiz/ATAC_data/atac_input_16.json \
-  --singularity \
-  --leader-job-name atac-16 \
-  --local-loc-dir /dartfs/rc/lab/S/Szhao/qiruiz/ATAC_data/tmp_user/151-159 \
-  --local-out-dir  /dartfs/rc/lab/S/Szhao/qiruiz/ATAC_data/output/151-159
+caper hpc submit atac.wdl  \
+  -i /dartfs/rc/lab/S/Szhao/qiruiz/ATAC_data/atac_input_16.json   \
+  –singularity   \
+  –leader-job-name atac-16  \
+  –local-loc-dir /dartfs/rc/lab/S/Szhao/qiruiz/ATAC_data/tmp_user/151-159   \
+  –local-out-dir  /dartfs/rc/lab/S/Szhao/qiruiz/ATAC_data/output/151-159
 
+---
 
-⸻
+## Notes
 
-Notes
-	•	Each JSON contains at most 10 replicates.
-	•	Replicates beyond 10 are distributed across multiple JSON files to avoid overly large input lists.
+- Each JSON contains at most **10 replicates**.  
+- Replicates beyond 10 are distributed across multiple JSON files to avoid overly large input lists.  
