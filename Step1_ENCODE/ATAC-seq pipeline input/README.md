@@ -13,7 +13,7 @@ atac_input_2.json
 atac_input_3.json
 …
 
-- Each JSON corresponds to one pipeline run, typically containing up to **10 replicates** (10 pairs of FASTQ files for paired-end sequencing).
+- Each JSON corresponds to one pipeline run, typically containing up to **10 replicates** (10 pairs of FASTQ files for paired-end sequencing).  
 - If more than 10 replicates exist for one sample, the sample is split across multiple JSON files (e.g., `atac_input_1.json` for reps 1–10, `atac_input_2.json` for reps 11–20, etc.).
 
 ---
@@ -44,9 +44,9 @@ Each replicate is defined by R1 and R2 files:
 "atac.true_rep_only": true,
 "atac.align_only": true
 
-	•	Disable IDR and cross-correlation steps
-	•	Use only true replicates
-	•	Run alignment only (skip peak calling and downstream analysis)
+Disable IDR and cross-correlation steps.
+Use only true replicates.
+Run alignment only (skip peak calling and downstream analysis).
 
 ⸻
 
