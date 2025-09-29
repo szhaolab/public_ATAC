@@ -1,25 +1,21 @@
-### Sample folder naming convention
+### Step 4: GATK variant calling pipeline
 
-The ATAC_bam directory is organized into subfolders, each corresponding to one biological sample.  
+This SLURM script runs the full GATK best-practices workflow on a merged BAM file:  
 
-These folders contain the outputs from **Step 2: MarkDuplicates** in the ATAC-seq processing workflow.  
-For each sequencing run (SRR ID), the pipeline produces a duplicate-marked BAM file:
+1. **MarkDuplicates (Picard)**  
+   - Input: `1001.merged.bam`  
+   - Output: `1001.merged.dupmark.bam` + `1001.dup_metrics.txt`  
 
-SRR7650729.dupmark.bam
-SRR7650730.dupmark.bam
-…
-SRR7650770.dupmark.bam
+2. **Base quality score recalibration (BQSR)**  
+   - `BaseRecalibrator` builds recalibration table using known sites (dbSNP, Mills indels).  
+   - `ApplyBQSR` produces `1001.recal.bam`.  
 
-- **Folder format:**  
-- `<SampleID>`: internal sample identifier (e.g. `1001`, `1002`).  
-- `<RunRange>`: range of SRR runs included in that sample.  
+3. **Variant calling (HaplotypeCaller)**  
+   - Generates GVCF: `1001.g.vcf.gz`.  
 
-- **Examples:**  
-- `/ATAC_bam/1001(1-42)/`  
-  - Sample ID = 1001  
-  - Contains SRR runs **1–42** (SRR7650729–SRR7650770).  
-  - Each run has a `.dupmark.bam` file produced by MarkDuplicates.  
-  - `bam_paths.txt` lists the full paths of these BAM files.  
-- `/ATAC_bam/1002(43-83)/`  
-  - Sample ID = 1002  
-  - Contains SRR runs **43–83**.  
+4. **Joint genotyping (GenotypeGVCFs)**  
+   - Converts GVCF into raw VCF: `1001.raw.vcf.gz`.  
+
+5. **Variant filtration (VariantFiltration)**  
+   - Applies standard hard filters (QD, FS, MQ, SOR, MQRankSum, ReadPosRankSum).  
+   - Final output: `1001.filtered.vcf.gz`.  
