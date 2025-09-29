@@ -1,0 +1,82 @@
+{
+  "atac.pipeline_type": "atac",
+  "atac.genome_tsv": "/dartfs/rc/lab/S/Szhao/qiruiz/ATAC_data/genome/hg38.tsv",
+
+  "atac.paired_end": true,
+
+  "atac.fastqs_rep1_R1": [
+    "/dartfs/rc/lab/S/Szhao/qiruiz/ATAC_data/fastq/SRR7650809_1.fastq"
+  ],
+  "atac.fastqs_rep1_R2": [
+    "/dartfs/rc/lab/S/Szhao/qiruiz/ATAC_data/fastq/SRR7650809_2.fastq"
+  ],
+
+  "atac.fastqs_rep2_R1": [
+    "/dartfs/rc/lab/S/Szhao/qiruiz/ATAC_data/fastq/SRR7650810_1.fastq"
+  ],
+  "atac.fastqs_rep2_R2": [
+    "/dartfs/rc/lab/S/Szhao/qiruiz/ATAC_data/fastq/SRR7650810_2.fastq"
+  ],
+
+  "atac.fastqs_rep3_R1": [
+    "/dartfs/rc/lab/S/Szhao/qiruiz/ATAC_data/fastq/SRR7650811_1.fastq"
+  ],
+  "atac.fastqs_rep3_R2": [
+    "/dartfs/rc/lab/S/Szhao/qiruiz/ATAC_data/fastq/SRR7650811_2.fastq"
+  ],
+
+  "atac.fastqs_rep4_R1": [
+    "/dartfs/rc/lab/S/Szhao/qiruiz/ATAC_data/fastq/SRR7650812_1.fastq"
+  ],
+  "atac.fastqs_rep4_R2": [
+    "/dartfs/rc/lab/S/Szhao/qiruiz/ATAC_data/fastq/SRR7650812_2.fastq"
+  ],
+
+  "atac.fastqs_rep5_R1": [
+    "/dartfs/rc/lab/S/Szhao/qiruiz/ATAC_data/fastq/SRR7650813_1.fastq"
+  ],
+  "atac.fastqs_rep5_R2": [
+    "/dartfs/rc/lab/S/Szhao/qiruiz/ATAC_data/fastq/SRR7650813_2.fastq"
+  ],
+
+  "atac.fastqs_rep6_R1": [
+    "/dartfs/rc/lab/S/Szhao/qiruiz/ATAC_data/fastq/SRR7650814_1.fastq"
+  ],
+  "atac.fastqs_rep6_R2": [
+    "/dartfs/rc/lab/S/Szhao/qiruiz/ATAC_data/fastq/SRR7650814_2.fastq"
+  ],
+
+  "atac.fastqs_rep7_R1": [
+    "/dartfs/rc/lab/S/Szhao/qiruiz/ATAC_data/fastq/SRR7650815_1.fastq"
+  ],
+  "atac.fastqs_rep7_R2": [
+    "/dartfs/rc/lab/S/Szhao/qiruiz/ATAC_data/fastq/SRR7650815_2.fastq"
+  ],
+
+  "atac.fastqs_rep8_R1": [
+    "/dartfs/rc/lab/S/Szhao/qiruiz/ATAC_data/fastq/SRR7650816_1.fastq"
+  ],
+  "atac.fastqs_rep8_R2": [
+    "/dartfs/rc/lab/S/Szhao/qiruiz/ATAC_data/fastq/SRR7650816_2.fastq"
+  ],
+
+  "atac.fastqs_rep9_R1": [
+    "/dartfs/rc/lab/S/Szhao/qiruiz/ATAC_data/fastq/SRR7650817_1.fastq"
+  ],
+  "atac.fastqs_rep9_R2": [
+    "/dartfs/rc/lab/S/Szhao/qiruiz/ATAC_data/fastq/SRR7650817_2.fastq"
+  ],
+
+  "atac.fastqs_rep10_R1": [
+    "/dartfs/rc/lab/S/Szhao/qiruiz/ATAC_data/fastq/SRR7650818_1.fastq"
+  ],
+  "atac.fastqs_rep10_R2": [
+    "/dartfs/rc/lab/S/Szhao/qiruiz/ATAC_data/fastq/SRR7650818_2.fastq"
+  ],
+
+  "atac.enable_idr": false,
+  "atac.enable_xcor": false,
+  "atac.true_rep_only": true,
+  "atac.align_only":    true
+  
+}
