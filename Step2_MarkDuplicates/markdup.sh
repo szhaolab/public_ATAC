@@ -15,7 +15,7 @@
 echo "Job $SLURM_JOB_ID starting at $(date) on $(hostname)"
 
 source /optnfs/common/miniconda3/etc/profile.d/conda.sh
-conda activate atac_java17
+conda activate atac
 
 LIST="/dartfs/rc/lab/S/Szhao/qiruiz/ATAC_bam/1001(1-42)/bam_paths.txt"
 OUTDIR="/dartfs/rc/lab/S/Szhao/qiruiz/ATAC_bam/1001(1-42)"
