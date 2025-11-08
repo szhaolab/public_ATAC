@@ -1,7 +1,7 @@
 ### Step 3: Merge per-run BAMs (SLURM job)
 
-The script `merge.sh` merges all per-run duplicate-marked BAMs (`*.dupmark.bam`) into one BAM per sample.  
-- **Input**: per-run `.dupmark.bam` files from folders like `1001(1-42)/`, `1002(43-83)/`, etc.  
+The script `merge.sh` merges all per-run preprocessed BAMs (sorted, deduplicated, and mitochondrial-filtered; *.srt.nodup.no_chrM_MT.bam) into one BAM per sample.  
+- **Input**: per-run `.srt.nodup.no_chrM_MT.bam` files from folders like `1001(1-42)/`, `1002(43-83)/`, etc.  
 - **Output**: each merged BAM and its index are stored in the corresponding `Individual` folder:
 
 /dartfs/rc/lab/S/Szhao/qiruiz/ATAC_bam/Individual1/1001.merged.bam
