@@ -16,7 +16,7 @@ echo "Job $SLURM_JOB_ID starting at $(date) on $(hostname)"
 source /optnfs/common/miniconda3/etc/profile.d/conda.sh
 conda activate atac
 
-IN_DIR="/dartfs/rc/lab/S/Szhao/qiruiz/ATAC_bam/1001(1-42)"
+IN_DIR='/dartfs/rc/lab/S/Szhao/public-ATAC/1001(1-42)'
 OUT_DIR="/dartfs/rc/lab/S/Szhao/qiruiz/ATAC_bam/Individual1"
 mkdir -p "$OUT_DIR"
 
@@ -24,9 +24,9 @@ MERGED_BAM="$OUT_DIR/1001.merged.bam"
 
 echo "[$(date)]  merging dupmark BAMs → $MERGED_BAM"
 samtools merge -@${SLURM_CPUS_PER_TASK:-12} -f "$MERGED_BAM" \
-               "$IN_DIR"/*.dupmark.bam
+               $IN_DIR/*.srt.nodup.no_chrM_MT.bam
 
 echo "[$(date)]  indexing"
 samtools index -@${SLURM_CPUS_PER_TASK:-12} "$MERGED_BAM"
 
-echo "Job $SLURM_JOB_ID finished $SRR at $(date)"
+echo "Job $SLURM_JOB_ID finished at $(date)"
