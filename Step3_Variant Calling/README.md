@@ -10,7 +10,7 @@ The workflow adds read group information (required by GATK) and then runs varian
 
 **Output:**
 
-* BAM with read groups: `1001.merged.withRG.bam` `1002.merged.withRG.bam` `1003.merged.withRG.bam` `1004.merged.withRG.bam`
+* BAM with read groups(at /dartfs/rc/lab/S/Szhao/qiruiz/ATAC_bam/): `1001.merged.withRG.bam` `1002.merged.withRG.bam` `1003.merged.withRG.bam` `1004.merged.withRG.bam`
 * Raw variant calls: `1001.hc.raw.vcf` `1002.hc.raw.vcf` `1003.hc.raw.vcf` `1004.hc.raw.vcf`
 
 ---
