@@ -5,13 +5,13 @@ The workflow adds read group information (required by GATK) and then runs varian
 
 **Input:**
 
-* Merged BAM file: `1001.merged.bam`
+* Merged BAM file: `1001.merged.bam` `1002.merged.bam` `1003.merged.bam` `1004.merged.bam`
 * Reference genome: `GRCh38_no_alt_analysis_set_GCA_000001405.15.fasta`
 
 **Output:**
 
-* BAM with read groups: `1001.merged.withRG.bam`
-* Raw variant calls: `1001.hc.raw.vcf`
+* BAM with read groups: `1001.merged.withRG.bam` `1002.merged.withRG.bam` `1003.merged.withRG.bam` `1004.merged.withRG.bam`
+* Raw variant calls: `1001.hc.raw.vcf` `1002.hc.raw.vcf` `1003.hc.raw.vcf` `1004.hc.raw.vcf`
 
 ---
 
