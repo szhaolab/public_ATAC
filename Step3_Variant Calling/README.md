@@ -35,13 +35,12 @@ The workflow adds read group information (required by GATK) and then runs varian
    * Uses parameters: `--min-pruning 10` and `--standard-min-confidence-threshold-for-calling 20.0`.
    * **Input:** `1001.merged.withRG.bam`, `1002.merged.withRG.bam`, `1003.merged.withRG.bam`, `1004.merged.withRG.bam`
    * **Output:**
-                 `/dartfs/rc/lab/S/Szhao/public-ATAC/variant_calling/1001.hc.raw.vcf`
-    
-                 `/dartfs/rc/lab/S/Szhao/public-ATAC/variant_calling/1002.hc.raw.vcf`
-     
-                 `/dartfs/rc/lab/S/Szhao/public-ATAC/variant_calling/1003.hc.raw.vcf`
-     
-                 `/dartfs/rc/lab/S/Szhao/public-ATAC/variant_calling/1004.hc.raw.vcf`
+   ```
+   /dartfs/rc/lab/S/Szhao/public-ATAC/variant_calling/1001.hc.raw.vcf
+   /dartfs/rc/lab/S/Szhao/public-ATAC/variant_calling/1002.hc.raw.vcf
+   /dartfs/rc/lab/S/Szhao/public-ATAC/variant_calling/1003.hc.raw.vcf
+   /dartfs/rc/lab/S/Szhao/public-ATAC/variant_calling/1004.hc.raw.vcf
+   ```
                  
 
 ---
